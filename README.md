@@ -1,1 +1,1 @@
-# diplocssoc
+# Diplomatura Ciencias Sociales
