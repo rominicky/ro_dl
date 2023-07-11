@@ -1,1 +1,1 @@
-# Diplomatura Ciencias Sociales
+# Diplomatura
