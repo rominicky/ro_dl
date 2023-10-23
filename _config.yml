@@ -8,7 +8,24 @@ remote_theme: hydecorp/hydejack@v9
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
+author:
+  name:  Romina De León
+  email:  romideleon@gmail.com
+  social:
+    github:  rominicky
 
+font:  Noto Sans, Helvetica, Arial, sans-serif
+font_heading: Roboto Slab, Helvetica, Arial, sans-serif
+google_fonts: Roboto+Slab:700|Noto+Sans:400,400i,700,700i
+
+hydejack:
+  dark_mode:
+    dynamic: true
+    sunrise: 6
+    sunset:  18
+    icon:    true
+    always:  false
+    
 exclude:
 - .sass-cache/
 - .jekyll-cache/
