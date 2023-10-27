@@ -1,0 +1,98 @@
+<h1 id="primeros-conocimientos-en-git-y-github">Primeros conocimientos en Git y GitHub</h1>
+<p><strong>Índice</strong></p>
+<ul>
+<li><a href="#id1">Qué es Git?</a></li>
+<li><a href="#id2">Instalación Git</a></li>
+<li><a href="#id3">Qué es GitHub</a></li>
+</ul>
+<h1 id="-a-name-id1-qu-es-git-a-"><a name="id1">¿Qué es Git?</a></h1>
+<p>Git es un sistema de control de versiones distribuido y de código abierto; es rápido, eficiente con grandes proyectos y posee un sistema de ramificación (branching) para desarrollo no lineal. Fue creado por Linus Torvalds, fundador de Linux.</p>
+<p><img src="https://git-scm.com/images/branching-illustration@2x.png" alt="Git"></p>
+<p>Un control de versiones es un sistema que registra los cambios realizados en un archivos a lo largo del tiempo, permitiendo recuperar cualquier versión trabajada.</p>
+<p>Git almacena y maneja información como conjunto de copias instantáneas de un sistema de archivos, como archivos miniatura, que permiten guardar una referencia en ellos. Además, la mayoría de las operaciones en Git se hacen con archivos y recursos locales, por ello evita el problema de la velocidad de red. Finalmente, su integridad radica en la suma de comprobaciones antes de ser almacenado, y la identificación de cada cambio.</p>
+<p><img src="https://git-scm.com/book/en/v2/images/areas.png" alt="Directorio de trabajo, área de almacenamiento y directorio Git"></p>
+<h3 id="flujo-de-trabajo-b-sico-en-git">Flujo de trabajo básico en Git</h3>
+<ul>
+<li>Modificas una serie de archivos en tu directorio de trabajo.</li>
+<li>Preparas los archivos, añadiéndolos a tu área de preparación.</li>
+<li>Confirmas los cambios, lo que toma los archivos tal y como están en el área de preparación y almacena esa copia instantánea de manera permanente en tu directorio de Git.</li>
+</ul>
+<p>Puedes leer más sobre este sistema de control de versiones desde: <a href="https://git-scm.com/book/es/v2">https://git-scm.com/book/es/v2</a></p>
+<h1 id="-a-name-id3-qu-es-github-a-"><a name="id3">¿Qué es GitHub?</a></h1>
+<p>GitHub es un proveedor de alojamiento para repositorios Git, permitiendo proyectos de código abierto, seguimiento de fallos, revisión de código, etc. No es parte directa de Git, pero si es totalmente compatible y útil su uso en conjunto, para facilitar el trabajo colaborativo.</p>
+<h3 id="acciones-principales-de-interacci-n-en-github">Acciones principales de interacción en GitHub</h3>
+<ul>
+<li>Crear un repositorio o clonar uno existente. Los repositorios serán los lugares donde se alojan tus proyectos.</li>
+<li>Bifurcación: El proceso de copiar el código de otra persona del repositorio para modificarlo.</li>
+<li>Pull: Cuando haya terminado de hacer cambios en el código de otra persona, puede compartirlos con el propietario original a través de una <em>pull request</em>.</li>
+<li>Fusión: Los propietarios pueden añadir nuevos cambios a sus proyectos a través de una fusión, y dar crédito a los contribuyentes que los han sugerido.</li>
+</ul>
+<h2 id="-a-name-id2-instalaci-n-de-git-a-"><a name="id2">Instalación de Git</a></h2>
+<p>Antes de empezar a utilizar Git, tienes que instalarlo en tu computadora. Incluso si ya está instalado, este es posiblemente un buen momento para actualizarlo a su última versión. Puedes instalarlo como un paquete, a partir de un archivo instalador o bajando el código fuente y compilándolo tú mismo.</p>
+<p>Puede acceder a las instrucciones para los tres sistemas operativos desde el siguiente <a href="https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git">link</a>. Se puede descargar desde:</p>
+<ul>
+<li>Descarga para <a href="http://git-scm.com/download/win">Windows</a></li>
+<li>Descarga para <a href="http://git-scm.com/download/linux">Linux</a></li>
+<li>Descarga para <a href="http://git-scm.com/download/mac">Mac</a></li>
+</ul>
+<h3 id="integraci-n-git-y-github">Integración git y GitHub</h3>
+<p>Para que se puedan integrar git con Github sigue los siguientes pasos, luego de la instalación de git.</p>
+<ol>
+<li>Crea un usuario o inicia sesión en <a href="https://github.com/">Github</a>, recuerda que tienes la opción gratuita además de opciones pagas.</li>
+<li><p>Crea o clona un repositorio de GitHub a tu cuenta (En el punto siguiente se verá como clonar y trabajar en git desde local).</p>
+<ol>
+<li><ol>
+<li>Para crear un repositorio:</li>
+<li><a href="https://git-scm.com/book/es/v2/GitHub-Creaci%C3%B3n-y-configuraci%C3%B3n-de-la-cuenta">https://git-scm.com/book/es/v2/GitHub-Creaci%C3%B3n-y-configuraci%C3%B3n-de-la-cuenta</a><h3 id="pasos-para-trabajar-en-git-clonar-repositorios-y-modificar-archivos">Pasos para trabajar en Git, clonar repositorios y modificar archivos</h3>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Abrir la terminal GIT CMD</p>
+</li>
+<li><p>Elegir ubicación para la carpeta donde va a alejarse el sitio en local:</p>
+</li>
+</ol>
+<blockquote>
+<p><code>cd ubicación-deseada</code></p>
+</blockquote>
+<ul>
+<li>Clonar el repositorio en la PC:</li>
+</ul>
+<blockquote>
+<p><code>git clone urldelrepositoriodegit</code></p>
+</blockquote>
+<ul>
+<li><p>Ahora puedes trabajar en el archivo que desees del repositorio</p>
+</li>
+<li><p>Una vez realizadas y guardadas las modificaciones, desde la terminal puedes observar el estado de las modificaciones:</p>
+</li>
+</ul>
+<blockquote>
+<p><code>git status</code></p>
+</blockquote>
+<ul>
+<li>Ahora, debes añadir los archivos modificados que serán subidos/actualizdos en el repositorios:</li>
+</ul>
+<blockquote>
+<p><code>git add nombredelarchivo</code></p>
+</blockquote>
+<ul>
+<li>Siempre es conveniente escribir un mensaje sobre los cambios realizados:</li>
+</ul>
+<blockquote>
+<p><code>git commit -m “breve descripcion de cambios”</code></p>
+</blockquote>
+<ul>
+<li>Traer cambios hechos por otros usuarios al mismo tiempo:</li>
+</ul>
+<blockquote>
+<p><code>git pull</code></p>
+</blockquote>
+<ul>
+<li>Subir las modificaciones hechas en tu local al repositorio de github:</li>
+</ul>
+<blockquote>
+<p><code>git push</code></p>
+</blockquote>
