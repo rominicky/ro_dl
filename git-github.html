@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style>
+      ol {
+        counter-reset: item;
+      }
+      li {
+        display: block;
+        color: #666666;
+      }
+      li:before {
+        content: counters(item, ".") " ";
+        counter-increment: item;
+      }
+    </style>
+  </head>
+  <body>
 <h1 id="primeros-conocimientos-en-git-y-github">Primeros conocimientos en Git y GitHub</h1>
 <p><strong>Índice</strong></p>
 <ul>
@@ -21,78 +40,56 @@
 <h1 id="-a-name-id3-qu-es-github-a-"><a name="id3">¿Qué es GitHub?</a></h1>
 <p>GitHub es un proveedor de alojamiento para repositorios Git, permitiendo proyectos de código abierto, seguimiento de fallos, revisión de código, etc. No es parte directa de Git, pero si es totalmente compatible y útil su uso en conjunto, para facilitar el trabajo colaborativo.</p>
 <h3 id="acciones-principales-de-interacci-n-en-github">Acciones principales de interacción en GitHub</h3>
-<ul>
-<li>Crear un repositorio o clonar uno existente. Los repositorios serán los lugares donde se alojan tus proyectos.</li>
+<ol><li>Crear un repositorio o clonar uno existente. Los repositorios serán los lugares donde se alojan tus proyectos.</li>
+
 <li>Bifurcación: El proceso de copiar el código de otra persona del repositorio para modificarlo.</li>
+
 <li>Pull: Cuando haya terminado de hacer cambios en el código de otra persona, puede compartirlos con el propietario original a través de una <em>pull request</em>.</li>
+
 <li>Fusión: Los propietarios pueden añadir nuevos cambios a sus proyectos a través de una fusión, y dar crédito a los contribuyentes que los han sugerido.</li>
-</ul>
+</ol>
 <h2 id="-a-name-id2-instalaci-n-de-git-a-"><a name="id2">Instalación de Git</a></h2>
 <p>Antes de empezar a utilizar Git, tienes que instalarlo en tu computadora. Incluso si ya está instalado, este es posiblemente un buen momento para actualizarlo a su última versión. Puedes instalarlo como un paquete, a partir de un archivo instalador o bajando el código fuente y compilándolo tú mismo.</p>
 <p>Puede acceder a las instrucciones para los tres sistemas operativos desde el siguiente <a href="https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git">link</a>. Se puede descargar desde:</p>
-<ul>
+<ol>
 <li>Descarga para <a href="http://git-scm.com/download/win">Windows</a></li>
 <li>Descarga para <a href="http://git-scm.com/download/linux">Linux</a></li>
 <li>Descarga para <a href="http://git-scm.com/download/mac">Mac</a></li>
-</ul>
+</ol>
 <h3 id="integraci-n-git-y-github">Integración git y GitHub</h3>
 <p>Para que se puedan integrar git con Github sigue los siguientes pasos, luego de la instalación de git.</p>
 <ol>
 <li>Crea un usuario o inicia sesión en <a href="https://github.com/">Github</a>, recuerda que tienes la opción gratuita además de opciones pagas.</li>
-<li><p>Crea o clona un repositorio de GitHub a tu cuenta (En el punto siguiente se verá como clonar y trabajar en git desde local).</p>
-<ol>
-<li><ol>
-<li>Para crear un repositorio:</li>
-<li><a href="https://git-scm.com/book/es/v2/GitHub-Creaci%C3%B3n-y-configuraci%C3%B3n-de-la-cuenta">https://git-scm.com/book/es/v2/GitHub-Creaci%C3%B3n-y-configuraci%C3%B3n-de-la-cuenta</a><h3 id="pasos-para-trabajar-en-git-clonar-repositorios-y-modificar-archivos">Pasos para trabajar en Git, clonar repositorios y modificar archivos</h3>
+
+<li>Crea o clona un repositorio de GitHub a tu cuenta (En el punto siguiente se verá como clonar y trabajar en git desde local).
+<ol><li>Para crear un repositorio: <a href="https://git-scm.com/book/es/v2/GitHub-Creaci%C3%B3n-y-configuraci%C3%B3n-de-la-cuenta">https://git-scm.com/book/es/v2/GitHub-Creaci%C3%B3n-y-configuraci%C3%B3n-de-la-cuenta</a></li></ol>
+
+<li><strong>Pasos para trabajar en Git, clonar repositorios y modificar archivos</strong></li>
+<ol><li>Abrir la terminal GIT CMD</li>
+<li>Elegir ubicación para la carpeta donde va a alejarse el sitio en local:
 </li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>Abrir la terminal GIT CMD</p>
-</li>
-<li><p>Elegir ubicación para la carpeta donde va a alejarse el sitio en local:</p>
-</li>
-</ol>
 <blockquote>
-<p><code>cd ubicación-deseada</code></p>
+<code>cd ubicación-deseada</code>
 </blockquote>
-<ul>
 <li>Clonar el repositorio en la PC:</li>
-</ul>
 <blockquote>
-<p><code>git clone urldelrepositoriodegit</code></p>
-</blockquote>
-<ul>
+<code>git clone urldelrepositoriodegit</code></blockquote>
 <li><p>Ahora puedes trabajar en el archivo que desees del repositorio</p>
 </li>
-<li><p>Una vez realizadas y guardadas las modificaciones, desde la terminal puedes observar el estado de las modificaciones:</p>
-</li>
-</ul>
+<li>Una vez realizadas y guardadas las modificaciones, desde la terminal puedes observar el estado de las modificaciones:
 <blockquote>
-<p><code>git status</code></p>
-</blockquote>
-<ul>
+<code>git status</code></blockquote>
 <li>Ahora, debes añadir los archivos modificados que serán subidos/actualizdos en el repositorios:</li>
-</ul>
 <blockquote>
-<p><code>git add nombredelarchivo</code></p>
-</blockquote>
-<ul>
+<code>git add nombredelarchivo</code></blockquote>
 <li>Siempre es conveniente escribir un mensaje sobre los cambios realizados:</li>
-</ul>
 <blockquote>
-<p><code>git commit -m “breve descripcion de cambios”</code></p>
-</blockquote>
-<ul>
+<code>git commit -m “breve descripcion de cambios”</code></blockquote>
 <li>Traer cambios hechos por otros usuarios al mismo tiempo:</li>
-</ul>
 <blockquote>
-<p><code>git pull</code></p>
+<code>git pull</code>
 </blockquote>
-<ul>
 <li>Subir las modificaciones hechas en tu local al repositorio de github:</li>
-</ul>
 <blockquote>
-<p><code>git push</code></p>
-</blockquote>
+<code>git push</code>
+</blockquote></ol>
